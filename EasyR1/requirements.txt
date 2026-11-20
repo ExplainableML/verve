@@ -1,0 +1,26 @@
+accelerate
+codetiming
+datasets
+flash-attn>=2.4.3
+# Qwen3.5 only: fast path of its linear-attention layers (without these the
+# slower torch fallback runs, with the same results)
+fla-core==0.4.2
+flash-linear-attention==0.4.2
+causal-conv1d==1.6.1
+liger-kernel
+mathruler
+numpy
+omegaconf
+pandas
+peft
+pillow
+pyarrow>=15.0.0
+pylatexenc
+qwen-vl-utils==0.0.14
+ray[default]
+tensordict
+torchdata
+# vllm 0.18 declares transformers<5, but Qwen3.5 needs transformers 5.x:
+# install transformers==5.5.3 afterwards (see the top-level README)
+vllm==0.18.0
+wandb
